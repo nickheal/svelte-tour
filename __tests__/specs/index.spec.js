@@ -1,37 +1,25 @@
-import { register, subscribe, unregister } from 'src/index';
-
-// const flushPromises = () => new Promise(setImmediate);
-
-// let mockState;
-
-// jest.mock('svelte/store', () => ({
-//   __esModule: true,
-//   writable: (initialState) => {
-//     mockState = initialState;
-  
-//     return {
-//       update: func => (mockState = func(mockState))
-//     };
-//   }
-// }));
+import { register, run, stop, subscribe, unregister } from 'src/index';
 
 describe('index', () => {
-  describe('register', () => {
-    it ('should add items to the state', () => {
+  describe('register/unregister', () => {
+    it ('should add/remove items to the state', () => {
       const update = jest.fn();
       subscribe(update);
       register('test');
       expect(update.mock.calls[1][0].items).toEqual(['test']);
+      unregister('test');
+      expect(update.mock.calls[2][0].items).toEqual([]);
     });
   });
-});
 
-describe('unregister', () => {
-  it ('should remove items from the state', () => {
-    const update = jest.fn();
-    register('test');
-    subscribe(update);
-    unregister('test');
-    expect(update.mock.calls[1][0].items).toEqual([]);
+  describe('run/stop', () => {
+    it ('should start/stop the tour', () => {
+      const update = jest.fn();
+      subscribe(update);
+      run();
+      expect(update.mock.calls[1][0].active).toBe(true);
+      stop();
+      expect(update.mock.calls[2][0].active).toBe(false);
+    });
   });
 });
