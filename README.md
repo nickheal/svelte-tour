@@ -1,6 +1,6 @@
 # svelte-tour
 
-![Screenshot](./docs/demo.gif)
+![Screenshot](https://github.com/nickheal/svelte-tour/blob/master/docs/demo.gif?raw=true)
 
 svelte-tour components to create an interactive tour.
 
