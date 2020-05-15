@@ -1,7 +1,7 @@
 {
   "name": "svelte-tour",
   "description": "Svelte components to create an interactive tour.",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "svelte": "src/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
