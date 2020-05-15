@@ -7,6 +7,7 @@ const tourStore = writable({
 
 export { default as Tour } from './Tour.svelte';
 export { default as TourItem } from './TourItem.svelte';
+export { default as TourTip } from './TourTip.svelte';
 
 export function register(el) {
   tourStore.update(store => ({
@@ -32,7 +33,7 @@ export function stop() {
 export function unregister(el) {
   tourStore.update(store => ({
     ...store,
-    items: store.items.splice(store.items.indexOf(el), 1)
+    items: store.items.filter(item => item !== el)
   }));
 }
 

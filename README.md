@@ -1,8 +1,11 @@
 # svelte-tour
 
+[![Codecov Coverage](https://img.shields.io/codecov/c/github/nickheal/svelte-tour/master.svg?style=flat)](https://codecov.io/gh/nickheal/svelte-tour/)
+![GitHub](https://img.shields.io/github/license/nickheal/svelte-tour)
+
 ![Screenshot](https://github.com/nickheal/svelte-tour/blob/master/docs/demo.gif?raw=true)
 
-svelte-tour components to create an interactive tour.
+Svelte components to create an interactive tour.
 
 ## Quick start
 
