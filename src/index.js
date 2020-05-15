@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store';
 
-const tourStore = writable({
+export const tourStore = writable({
   active: false,
   items: []
 });

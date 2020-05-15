@@ -18,7 +18,7 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      # - run: npm test
+      - run: npm test
       - run: npm run build
       - run: git config user.email "nick3_4@hotmail.com"
       - run: git config user.name "nickheal"
@@ -27,6 +27,6 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-      # - run: ./node_modules/.bin/codecov --token="${{secrets.CODECOV_TOKEN}}"
+      - run: ./node_modules/.bin/codecov --token="${{secrets.CODECOV_TOKEN}}"
 
       
