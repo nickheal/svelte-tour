@@ -1,6 +1,6 @@
 <script>
   import { onMount, onDestroy } from 'svelte';
-  import { register, unregister } from './tour';
+  import { register, unregister } from './index';
 
   export let message;
   let element;

@@ -1,5 +1,5 @@
 <script>
-  import { stop, subscribe } from '../stores/tour';
+  import { stop, subscribe } from './index';
 
   export let TourTip;
   
