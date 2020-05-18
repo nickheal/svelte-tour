@@ -10,6 +10,12 @@
     "release": "standard-version",
     "test": "jest"
   },
+  "author": "Nick Heal",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nickheal/svelte-tour.git"
+  },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
@@ -17,9 +23,11 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@rollup/plugin-node-resolve": "^6.0.0",
+    "@testing-library/svelte": "^3.0.0",
     "babel-jest": "^26.0.1",
     "codecov": "^3.6.5",
     "husky": "^4.2.5",
@@ -39,9 +47,5 @@
   "files": [
     "src",
     "dist"
-  ],
-  "dependencies": {
-    "@babel/preset-env": "^7.9.6",
-    "@testing-library/svelte": "^3.0.0"
-  }
+  ]
 }
