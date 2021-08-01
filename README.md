@@ -9,15 +9,15 @@ Svelte components to create an interactive tour.
 
 ## Quick start
 
-1. Somewhere in your application—most likely at a high level near the entry-point—you need to include the `Tour` component. This handles showing the tour when it is run.
+1. Somewhere in your application—most likely at a high level near the entry-point—you need to include the `Tour` component. This handles showing the tour when it is run. It needs to have a TourTip component supplied to it. You can use the minimal default one supplied in the package if you like.
 ```HTML
 <script>
-  import { Tour } from 'svelte-tour';
+  import { Tour, TourTip } from 'svelte-tour';
 </script>
 
 <main>
   <slot></slot>
-  <Tour></Tour>
+  <Tour TourTip={TourTip}></Tour>
 </main>
 ```
 
