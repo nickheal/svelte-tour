@@ -56,11 +56,12 @@
 {#if active && items && items.length}
   <div class="scrim" style={getScrimStyle(items[currentStep])}></div>
   <div class="tooltip" style={getTooltipStyle(items[currentStep])}>
-    <TourTip
+    <svelte:component
+      this={TourTip}
       {atEnd}
       message={items[currentStep].getAttribute('data-tour')}
       {onClickNext}
-    ></TourTip>
+    />
   </div>
 {/if}
 
