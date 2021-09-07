@@ -3,10 +3,12 @@
   import { register, unregister } from './index';
 
   export let message;
+  export let sequence = 0;
+
   let element;
 
   onMount(() => {
-    register(element);
+    register(element, { message, sequence });
   });
 
   onDestroy(() => {
@@ -14,6 +16,6 @@
   });
 </script>
 
-<div bind:this={element} data-tour={message}>
   <slot></slot>
+<div bind:this={element}>
 </div>
