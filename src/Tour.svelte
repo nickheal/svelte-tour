@@ -19,8 +19,8 @@
     currentStep++;
   }
 
-  function getScrimStyle(step) {
-    const boundingRect = step.getBoundingClientRect();
+  function getScrimStyle(item) {
+    const boundingRect = item.element.getBoundingClientRect();
     const left = boundingRect.left;
     const right = left + boundingRect.width;
     const top = boundingRect.top;
@@ -42,9 +42,9 @@
     `;
   }
 
-	function getTooltipStyle(step) {
+  function getTooltipStyle(item) {
     const TOOLTIP_WIDTH = 300;
-    const boundingRect = step.getBoundingClientRect();
+    const boundingRect = item.element.getBoundingClientRect();
     const itemHorizontalCenter = boundingRect.left + boundingRect.width / 2;
     let tooltipLeft = itemHorizontalCenter - (TOOLTIP_WIDTH / 2);
     if (tooltipLeft < 0) tooltipLeft = 0;
@@ -59,7 +59,7 @@
     <svelte:component
       this={TourTip}
       {atEnd}
-      message={items[currentStep].getAttribute('data-tour')}
+      message={items[currentStep].parameters.message}
       {onClickNext}
     />
   </div>
